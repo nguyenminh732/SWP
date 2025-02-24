@@ -8,7 +8,10 @@ import utils.PasswordHasher;
 
 public class UserDAO {
     public boolean registerUser(User user) throws SQLException {
-        String sql = "INSERT INTO Users (Username, PasswordHash, Email, Role) VALUES (?, ?, ?, 'USER')";
+        // Check if this is the first user being registered
+        boolean isFirstUser = isFirstUser();
+        
+        String sql = "INSERT INTO Users (Username, PasswordHash, Email, RoleID) VALUES (?, ?, ?, ?)";
         
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -16,13 +19,36 @@ public class UserDAO {
             stmt.setString(1, user.getUsername());
             stmt.setString(2, PasswordHasher.hashPassword(user.getPassword()));
             stmt.setString(3, user.getEmail());
+            // If first user, set as Admin (RoleID = 1), otherwise User (RoleID = 2)
+            stmt.setInt(4, isFirstUser ? 1 : 2);
             
-            return stmt.executeUpdate() > 0;
+            boolean success = stmt.executeUpdate() > 0;
+            if (success) {
+                // Update the user object's role
+                user.setRole(isFirstUser ? "Admin" : "User");
+            }
+            return success;
+        }
+    }
+    
+    private boolean isFirstUser() throws SQLException {
+        String sql = "SELECT COUNT(*) FROM Users";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            
+            if (rs.next()) {
+                return rs.getInt(1) == 0;
+            }
+            return true;
         }
     }
     
     public User login(String username, String password) throws SQLException {
-        String sql = "SELECT * FROM Users WHERE Username = ?";
+        String sql = "SELECT u.*, r.RoleName FROM Users u " +
+                    "JOIN roles r ON u.RoleID = r.RoleID " +
+                    "WHERE u.Username = ?";
         
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -37,6 +63,7 @@ public class UserDAO {
                         user.setUserId(rs.getInt("UserID"));
                         user.setUsername(rs.getString("Username"));
                         user.setEmail(rs.getString("Email"));
+                        user.setRole(rs.getString("RoleName"));
                         user.setCreatedAt(rs.getTimestamp("CreatedAt"));
                         return user;
                     }
@@ -111,4 +138,20 @@ public class UserDAO {
         }
     }
     
+    public String getResetToken(String email) throws SQLException {
+        String sql = "SELECT reset_token FROM Users WHERE Email = ?";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            
+            stmt.setString(1, email);
+            
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getString("reset_token");
+                }
+            }
+        }
+        return null;
+    }
 }

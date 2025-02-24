@@ -25,7 +25,13 @@ public class LoginServlet extends HttpServlet {
             if (user != null) {
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
-                response.sendRedirect("index.html"); // Redirect to home page after login
+                
+                // Redirect based on user role
+                if ("Admin".equals(user.getRole())) {
+                    response.sendRedirect(request.getContextPath() + "/admin/products");
+                } else {
+                    response.sendRedirect(request.getContextPath() + "/booking");
+                }
             } else {
                 request.setAttribute("error", "Invalid username or password");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
@@ -39,6 +45,19 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // Check if user is already logged in
+        HttpSession session = request.getSession(false);
+        if (session != null && session.getAttribute("user") != null) {
+            User user = (User) session.getAttribute("user");
+            if ("Admin".equals(user.getRole())) {
+                response.sendRedirect(request.getContextPath() + "/admin/products");
+                return;
+            } else {
+                response.sendRedirect(request.getContextPath() + "/booking");
+                return;
+            }
+        }
+        
         request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 }
