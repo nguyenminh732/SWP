@@ -162,14 +162,14 @@
 
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto active" href="#hero">Trang chủ</a></li>
                         <li><a class="nav-link scrollto" href="#about">About</a></li>
                         <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
                         <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
-                        <li><a class="nav-link scrollto" href="#events">Events</a></li>
-                        <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
+                        <li><a class="nav-link scrollto" href="#events">Sự kiện</a></li>
+                        <li><a class="nav-link scrollto" href="#chefs">Đầu bếp</a></li>
                         <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li><a class="nav-link scrollto" href="#contact">Liên hệ với chúng tôi</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -457,8 +457,8 @@
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
-                        <h2>Events</h2>
-                        <p>Organize Your Events in our Restaurant</p>
+                        <h2>Sự kiện</h2>
+                        <p>Tổ chức sự kiện của bạn tại nhà hàng của chúng tôi</p>
                     </div>
 
                     <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
@@ -470,22 +470,22 @@
                                         <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
                                     </div>
                                     <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                        <h3>Birthday Parties</h3>
+                                        <h3>Tiệc sinh nhật</h3>
                                         <div class="price">
-                                            <p><span>$189</span></p>
+                                            <p><span></span></p>
                                         </div>
                                         <p class="fst-italic">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                            magna aliqua.
+                                            Tổ chức tiệc sinh nhật trọn gói tại nhà hàng sang trọng!
                                         </p>
                                         <ul>
-                                            <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                            <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                            <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                            <li><i class="bi bi-check-circled"></i> Không gian ấm cúng, thực đơn đa dạng, dịch vụ chuyên nghiệp.</li>
+                                            <li><i class="bi bi-check-circled"></i> Trang trí theo yêu cầu – biến ngày sinh nhật thành kỷ niệm đáng nhớ!</li>
+                                            <li><i class="bi bi-check-circled"></i> Nhận đặt tiệc sinh nhật cho cá nhân, gia đình và công ty.</li>
+                                            <li><i class="bi bi-check-circled"></i> Đội ngũ tận tâm, giúp bạn có một bữa tiệc hoàn hảo.</li>
+                                            <li><i class="bi bi-check-circled"></i> Đặt tiệc ngay hôm nay để nhận nhiều ưu đãi hấp dẫn!</li>
                                         </ul>
                                         <p>
-                                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                            velit esse cillum dolore eu fugiat nulla pariatur
+                                            Combo tiệc sinh nhật hấp dẫn – ưu đãi đặc biệt khi đặt trước!
                                         </p>
                                     </div>
                                 </div>
@@ -497,22 +497,22 @@
                                         <img src="assets/img/event-private.jpg" class="img-fluid" alt="">
                                     </div>
                                     <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                        <h3>Private Parties</h3>
+                                        <h3>Tiệc gia đình</h3>
                                         <div class="price">
-                                            <p><span>$290</span></p>
+                                            <p><span></span></p>
                                         </div>
                                         <p class="fst-italic">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                            magna aliqua.
+                                            Tổ chức tiệc gia đình ấm cúng, trọn vẹn yêu thương!
                                         </p>
                                         <ul>
-                                            <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                            <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                            <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                            <li><i class="bi bi-check-circled"></i> Không gian sang trọng, thực đơn phong phú, phù hợp mọi thế hệ.</li>
+                                            <li><i class="bi bi-check-circled"></i> Quây quần bên nhau, tận hưởng những khoảnh khắc đáng nhớ.</li>
+                                            <li><i class="bi bi-check-circled"></i> Nhận đặt tiệc gia đình với dịch vụ chuyên nghiệp, chu đáo.</li>
+                                            <li><i class="bi bi-check-circled"></i> Từ bữa cơm thân mật đến đại tiệc sum vầy – chúng tôi đều có!</li>
+                                            <li><i class="bi bi-check-circled"></i> Đặt tiệc ngay để nhận ưu đãi hấp dẫn cho gia đình bạn!</li>
                                         </ul>
                                         <p>
-                                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                            velit esse cillum dolore eu fugiat nulla pariatur
+                                            Nhà hàng lý tưởng cho những buổi sum họp tràn ngập niềm vui.
                                         </p>
                                     </div>
                                 </div>
@@ -524,22 +524,22 @@
                                         <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
                                     </div>
                                     <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                        <h3>Custom Parties</h3>
+                                        <h3>Tiệc theo yêu cầu</h3>
                                         <div class="price">
-                                            <p><span>$99</span></p>
+                                            <p><span></span></p>
                                         </div>
                                         <p class="fst-italic">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                            magna aliqua.
+                                            Nhận đặt tiệc nhanh gọn – ngon miệng, tiện lợi!
                                         </p>
                                         <ul>
-                                            <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                            <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                            <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                            <li><i class="bi bi-check-circled"></i> Tiệc sinh nhật, họp mặt, liên hoan… chỉ cần gọi, chúng tôi lo!</li>
+                                            <li><i class="bi bi-check-circled"></i> Đồ ăn nhanh nhưng chất lượng, phục vụ tận tâm.</li>
+                                            <li><i class="bi bi-check-circled"></i> Combo tiệc theo yêu cầu – ngon, rẻ, giao tận nơi!</li>
+                                            <li><i class="bi bi-check-circled"></i> Tụ tập bạn bè, ăn uống thả ga với menu đa dạng.</li>
+                                            <li><i class="bi bi-check-circled"></i> Không gian thoải mái, phù hợp cho mọi bữa tiệc nhỏ.</li>
                                         </ul>
                                         <p>
-                                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                            velit esse cillum dolore eu fugiat nulla pariatur
+                                            Đặt trước để có ưu đãi hấp dẫn cho nhóm đông!
                                         </p>
                                     </div>
                                 </div>

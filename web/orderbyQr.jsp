@@ -139,7 +139,7 @@
         <header id="header" class="fixed-top d-flex align-items-cente">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-                <h1 class="logo me-auto me-lg-0"><a >Our Menu</a></h1>
+                <h1 class="logo me-auto me-lg-0"><a >Restaurantly</a></h1>
 
 
                 <div class="d-flex">
@@ -157,15 +157,16 @@
         <!-- ======= Menu Section ======= -->
         <section id="menu" class="menu section-bg">
             <div class="container" data-aos="fade-up">
+
                 <div class="section-title">
                     <h2></h2>
                     <h2></h2>
                     <h2></h2>
                     <h2></h2>
                     <h2></h2>
-                    <c:forEach items="${table}" var="tb">
+                    <p><c:forEach items="${table}" var="tb">
                         <p>Gọi món cho bàn số ${tb.tableNum}</p>
-                    </c:forEach>
+                    </c:forEach></p>
                 </div>
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
